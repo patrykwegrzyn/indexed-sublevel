@@ -1,0 +1,24 @@
+{
+  "name": "indexed-sublevel",
+  "version": "0.1.0",
+  "main": "./dist/cjs/index.js",
+  "module": "./dist/esm/index.js",
+  "types": "./dist/cjs/index.d.ts",
+  "scripts": {
+    "clean": "rm -rf dist",
+    "build:cjs": "tsc --module commonjs --outDir ./dist/cjs",
+    "build:esm": "tsc --module nodenext --outDir ./dist/esm",
+    "build": "npm run clean && npm run build:cjs && npm run build:esm"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "charwise-compact": "^6.0.1"
+  },
+  "devDependencies": {
+    "abstract-level": "^3.0.1",
+    "typescript": "^5.7.3"
+  }
+}
